@@ -1,0 +1,14 @@
+<h1>Users</h1>
+<app-navbar (changedViewEvent)="changeCardView($event)"></app-navbar>
+
+<div class="card-view__container" *ngIf="cardView">
+  <div class="card-view__item" *ngFor=" let currentUser of data">
+    <app-card-view [item]="currentUser"></app-card-view>
+  </div>
+</div>
+
+<div class="list-view__container" *ngIf="listView">
+  <div class="list-view__item" *ngFor=" let currentUser of data">
+    <app-list-view > [item]="currentUser"</app-list-view>
+  </div>
+</div>
